@@ -364,8 +364,9 @@ const sendresetpasswordmail = async (username, email, token) => {
             from: config.emailUser,
             to: email,
             subject: 'For reset password',
-            // html: '<p> Hii ' + username + ', please click the link <a href= "https://gauravslonexpwd.onrender.com/api/resetpassword"> and reset your password </a>'
-            html: '<p> Hii ' + username + ', The OTP is is ' + GenOTP + ', please click the link <a href= "http://127.0.0.1:3000/api/resetpassword"> and reset your password </a>'
+
+            // html: '<p> Hii ' + username + ', The OTP is is ' + GenOTP + ', please click the link <a href= "http://127.0.0.1:3000/api/resetpassword"> and reset your password </a>'
+            html: '<p> Hii ' + username + ', The OTP is is ' + GenOTP + ', please click the link <a href= "https://gauravotpemail.onrender.com/api/resetpassword"> and reset your password </a>'
         }
 
         transporter.sendMail(mailOption, function (error, info) {
